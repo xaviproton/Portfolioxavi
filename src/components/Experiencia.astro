@@ -1,0 +1,30 @@
+---
+import ExperieanciaItem from "./ExperieanciaItem.astro";
+
+const EXPERIENCE = [
+
+  {
+    date: "marzo' 2022",
+    title: "Marketing asdasd dasdad",
+    description:
+      "dhakljsdaksjdka aslkdjaklsdjkaldj klasjdkasjdklasjd dkasjdklasjdklakasjdklajdasddasdasdasdasdasdasdadad",
+      link:"#",
+  },
+  {
+    date: "marzo' 2022",
+    title: "Marketing asdasd dasdad",
+    description:
+      "dhakljsdaksjdka aslkdjaklsdjkaldj klasjdkasjdklasjd dkasjdklasjdklakasjdklajdasddasdasdasdasdasdasdadad",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperieanciaItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -2,23 +2,69 @@
 import "@fontsource-variable/onest";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialP from "../components/icons/SocialP.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experiencia from "../components/Experiencia.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Work from "../components/icons/Work.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto  py-44" >
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola, soy Xavi Martin 
-		<div class="flex justify-center items-center"><Badge>Buscando trabajo</Badge></div> 
+<Layout
+  title="PortaFolio de Xavi Martin - Desarrollador y Programador web"
+  description="Estoy buscando trabajo de desarrollador, soy aplicado y efectivo, no me canso de aprender"
+>
+  <main class="px-5" >
+    <SectionContainer class="py-44 pb-24">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-2 lg:gap-x-10 md:gap-x-10 pb-6 lg:pb-10">
+        Hola, soy Xavi Martin
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+          <Badge>Buscando trabajo</Badge>
+        </a>
       </h1>
-      <h2 class="text-xl" >
-        Desarrollador Full Stack. Con Poca experiencia laboral pero buen
-        conocimiento en el desarrollo de aplicaciones , autodidacta de la
-        programación. Trabajé como Cocinero durante +20 años hasta que deciodí
-        cambiar de ámbito laboral. Soy una persona responsable y comprometida con
-        mis objetivos personales y laborales.
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[800px]">
+        Desarrollador de aplicaciones Web, Autodidacta de la programación.
+        Trabajé exitosamente como Cocinero durante +20 años hasta que decidí
+        cambiar de ámbito laboral. Soy una persona responsable y comprometida
+        con mis objetivos personales y laborales.
       </h2>
-      <ul></ul>
-    </section>
+      <nav class="flex gap-5 mt-8 flex-wrap">
+        <SocialP href="https://www.linkedin.com/feed/">
+          <LinkedIn class=" size-5 md:size-6" />
+          Linkedin
+        </SocialP>
+
+        <SocialP href="https://github.com/xaviproton">
+          <GitHubIcon class="size-5 md:size-6" />
+          GitHub
+        </SocialP>
+
+        <SocialP href="mailto:xavimans@gmail.com">
+          <Mail class="size-5 md:size-6" />
+          xavimans@gmail.com
+        </SocialP>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <CodeIcon class="size-9" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <Work class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experiencia />
+    </SectionContainer>
+
+   
   </main>
 </Layout>
